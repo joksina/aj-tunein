@@ -2,13 +2,12 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Stations from './Stations';
 import { BrowserRouter as Router } from "react-router-dom";
 import * as router from 'react-router'
+
 const navigate = jest.fn()
 
 beforeEach(() => {
   jest.spyOn(router, 'useNavigate').mockImplementation(() => navigate)
 })
-
-
 
 describe('Stations', () => {
   test('should render any content passed into Card component', () => {

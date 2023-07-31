@@ -3,7 +3,6 @@ import StationsPage from './Stations';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
-
 describe('Page/Stations', () => {
   test('renders Stations', () => {
     render(<Router><StationsPage /></Router>);
