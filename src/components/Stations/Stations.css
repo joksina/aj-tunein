@@ -1,0 +1,11 @@
+.stations {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.station-cards {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}

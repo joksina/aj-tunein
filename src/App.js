@@ -1,24 +1,23 @@
-import './App.css';
-import useFetch from "./hooks/useFetch";
-import Stations from "./components/Stations/Stations"
+import React from "react";
+import "./index.css";
 
-function App() {
-  const url = "https://s3-us-west-1.amazonaws.com/cdn-web.tunein.com/stations.json";
-  const { data, loading, error } = useFetch(url, null);
-  console.log("here i am", data?.data[0])
-  let test = data?.data
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Stations from "./pages/Stations/Stations";
+import StationDetails from "./pages/StationDetails/StationDetails";
+
+
+export default function App() {
   return (
     <div className="App">
-      <header> TuneIn </header>
-      <div>
-        {loading && <p>Loading... </p>}
-        {data && (
-          <Stations data={test} />
-        )}
-        {error && <p>Something went wrong</p>}
-      </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Stations/>}/>
+          <Route exact path="/stations" element={<Stations/>}/>
+          <Route exact path="/station/details" element={<StationDetails/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
 
-export default App;
