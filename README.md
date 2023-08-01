@@ -1,75 +1,47 @@
-# Getting Started with Create React App
+# Mini TuneIn App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A slimmed-down version of the TuneIn application using react boilerplate
 
-## Available Scripts
+## Getting Started
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run coverage`
 
-Launches the test runner in the interactive watch mode and runs the coverage of all tests.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner and also runs the test coverage.
 
-### `npm run build`
+## Notes
+Please read the Engineering design document below. It has some details on my architectural approach and some of the things I would have done to improve this implementation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Eng Document
+Open [EDD](https://docs.google.com/document/d/1a63E-W52fVMtZB4ZcvJdod-jJvmOqxWWBxmnDGimY88/edit) for more notes on documentation and design decision
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Stations List Page
+- Users are able to see the list of Stations
+- Users can click each list and it links to the detail page
+- Users can filter 
+![Screen Shot 2023-07-31 at 6 11 40 PM](https://github.com/joksina/aj-tunein/assets/12619243/7ff9618d-4c92-4985-bf4b-5185d9b8228e)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Station Details page
+- Users can click back to go back to the Stations' list page
+- Users can see details of the station
+- Audio auto plays
+![Screen Shot 2023-07-31 at 6 11 47 PM](https://github.com/joksina/aj-tunein/assets/12619243/eba2a889-f2cb-4441-a4d9-242f2b850dc5)
 
-### `npm run eject`
+### Tag Filters
+- When a user clicks `News`, it shows all stations related to `News`
+![Screen Shot 2023-07-31 at 7 30 20 PM](https://github.com/joksina/aj-tunein/assets/12619243/79b9d9ba-77c7-404b-be2c-2b43f9399f9e)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Test Coverage
+I ran into a roadblock testing the custom hooks. If I had more time, I would spend some time on it.
+![Screen Shot 2023-07-31 at 7 07 14 PM](https://github.com/joksina/aj-tunein/assets/12619243/1885baaf-e652-4936-b5ff-12240fc4eec1)
