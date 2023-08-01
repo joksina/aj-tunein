@@ -18,11 +18,10 @@ export default function Stations(props) {
         return <div key={data.id} className="station-cards" onClick={() => fetchStationDetails(data)}>
           <Card>
             <img src={data.imgUrl} alt="img" />
-            <div> {data.name} </div>
-            <div> Rating: {data.popularity} </div>
-            <div> {data.tags && data.tags.map(function(tag, index) {
-                  return (<span key={index}> {tag} </span>)
-                })}
+            <div className="station-container">
+              <div> <b> {data.name} </b> </div>
+              <div> Rating: {data.popularity} </div>
+              <div>{data.tags[0]}</div>
             </div>
           </Card>
         </div>
