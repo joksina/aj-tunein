@@ -7,3 +7,4 @@ test('should render any content passed into Card component', () => {
   const linkElement = screen.getByText(content);
   expect(linkElement).toBeInTheDocument();
 });
+

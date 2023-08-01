@@ -35,6 +35,6 @@ describe('Stations', () => {
     const div = await screen.findByText('CNN')
     await fireEvent.click(div);
     expect(navigate).toHaveBeenCalledTimes(1)
-  })
+  });
 
-})
+});

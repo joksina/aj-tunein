@@ -65,5 +65,4 @@ describe('StationDetails', () => {
     fireEvent.click(screen.getByText(/back/i))
     expect(handleClick).toHaveBeenCalledTimes(0)
   });
-
 });
